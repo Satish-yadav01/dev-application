@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "Developer API Collection",
+    "description": "Postman collection for Developer API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Developer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 0,\n  \"name\": \"John Doe\",\n  \"department\": \"Backend\",\n  \"stacks\": [\"Java\", \"Spring Boot\", \"PostgreSQL\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/developer/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "developer", "create"]
+        },
+        "description": "Create a new developer record"
+      },
+      "response": []
+    },
+    {
+      "name": "Update Developer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"name\": \"Jane Smith\",\n  \"department\": \"Frontend\",\n  \"stacks\": [\"React\", \"TypeScript\", \"CSS\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/developer/update",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "developer", "update"]
+        },
+        "description": "Update an existing developer record"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Developers",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/developer/fetch/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "developer", "fetch", "all"]
+        },
+        "description": "Retrieve all developers (filters and groups by department)"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
+
